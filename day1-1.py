@@ -2,10 +2,9 @@ import sys
 
 def calculate(array):
 	l = len(array)
-	for x in range(l):
-		for y in range(l):
-			# just in case the number 1010 is there :P
-			if ((x != y) and (array[x]+array[y]==2020)):
+	for x in range(l-1):
+		for y in range(x+1, l):
+			if (array[x]+array[y]==2020):
 				return array[x]*array[y]
 
 numbers = []

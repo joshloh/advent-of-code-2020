@@ -2,11 +2,10 @@ import sys
 
 def calculate(array):
 	l = len(array)
-	for x in range(l):
-		for y in range(l):
-			for z in range(l):
-				if ((x != y and x != z) and (array[x]+array[y]+array[z]==2020)):
-					print(array[x], array[y], array[z])
+	for x in range(l-2):
+		for y in range(x+1,l-1):
+			for z in range(y+1,l):
+				if (array[x]+array[y]+array[z]==2020):
 					return array[x]*array[y]*array[z]
 
 numbers = []
